@@ -1,6 +1,4 @@
 library(ggplot2)
-library(gguptake)
-
 
 
 planetPallete <- c("#2196F3", #E
@@ -14,10 +12,6 @@ planetPallete <- c("#2196F3", #E
 
 moons <- read.csv('~/moons.txt',sep = '\t')
 moons$Planet <- factor(moons$Planet, levels = c('Earth','Mars','Jupiter','Saturn','Uranus','Neptune','Pluto'))
-
-scale_fill_manual(values=planetPallete)
-scale_colour_manual(values=planetPallete)
-
 
 ggplot() + 
   theme_uptake(style = 'white') +
